@@ -58,4 +58,9 @@ public class MainMenu : MonoBehaviour
         optionsPanel.SetActive(false);
         mainMenuPanel.SetActive(true);
     }
+
+    public void BackToMenuButton()
+    {
+        SceneManager.LoadScene("MainMenu");
+    }
 }
