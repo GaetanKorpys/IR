@@ -16,6 +16,9 @@ public class MainMenu : MonoBehaviour
     [SerializeField]
     private GameObject optionsPanel;
 
+    [SerializeField]
+    private GameObject mainMenuPanel;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -46,6 +49,13 @@ public class MainMenu : MonoBehaviour
 
     public void EnableDisableOptionsPanel()
     {
-        optionsPanel.SetActive(!optionsPanel.activeSelf);
+        mainMenuPanel.SetActive(false);
+        optionsPanel.SetActive(true);
+    }
+
+    public void BackButton()
+    {
+        optionsPanel.SetActive(false);
+        mainMenuPanel.SetActive(true);
     }
 }
