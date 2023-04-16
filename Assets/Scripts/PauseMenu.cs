@@ -1,6 +1,7 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Audio;
+using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class PauseMenu : MonoBehaviour
 {
@@ -10,13 +11,19 @@ public class PauseMenu : MonoBehaviour
     private GameObject pauseMenu;
 
     [SerializeField]
-    private GameObject optionsMenu;
+    private GameObject pauseOptions;
 
     [SerializeField]
-    private GameObject panelPause;
+    private GameObject pausePanel;
 
     [SerializeField]
     private ThirdPersonOrbitCamBasic cameraScript;
+
+    [SerializeField]
+    private AudioMixer audioMixer;
+
+    [SerializeField]
+    private Slider soundSlider;
 
     // Update is called once per frame
     void Update()
@@ -26,9 +33,9 @@ public class PauseMenu : MonoBehaviour
             isMenuOpened = !isMenuOpened;
 
             pauseMenu.SetActive(isMenuOpened);
-            panelPause.SetActive(isMenuOpened);
+            pausePanel.SetActive(isMenuOpened);
 
-            optionsMenu.SetActive(false);
+            pauseOptions.SetActive(false);
 
             Time.timeScale = isMenuOpened ? 0 : 1;
             cameraScript.enabled = !isMenuOpened;
@@ -37,11 +44,54 @@ public class PauseMenu : MonoBehaviour
 
     public void RestartGameButton()
     {
-        panelPause.SetActive(false);
+        pausePanel.SetActive(false);
         pauseMenu.SetActive(false);
-        panelPause.SetActive(false);
+        pausePanel.SetActive(false);
         Time.timeScale = 1;
         cameraScript.enabled = true;
     }
 
+    public void BackToMenuButton()
+    {
+        pausePanel.SetActive(false);
+        pauseMenu.SetActive(false);
+        pausePanel.SetActive(false);
+        Time.timeScale = 1;
+        cameraScript.enabled = true;
+
+        SceneManager.LoadScene("MainMenu");
+    }
+
+    public void BackButton()
+    {
+        pauseOptions.SetActive(false);
+        pauseMenu.SetActive(true);
+    }
+
+    public void QuitButton()
+    {
+        Application.Quit();
+    }
+
+    public void SetFullScreen(bool isFullScreen)
+    {
+        Screen.fullScreen = isFullScreen;
+    }
+
+    public void SetVolume(float volume)
+    {
+        audioMixer.SetFloat("Volume", volume);
+    }
+
+    public void EnableDisableOptionsPanel()
+    {
+        pauseMenu.SetActive(false);
+        pauseOptions.SetActive(true);
+    }
+
+
+    public void setQualityGraphics(int qualityIndex)
+    {
+        QualitySettings.SetQualityLevel(qualityIndex);
+    }
 }

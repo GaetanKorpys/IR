@@ -23,11 +23,6 @@ public class MainMenu : MonoBehaviour
     [SerializeField]
     private Dropdown qualitiesDropdown;
 
-    [SerializeField]
-    private GameObject panelPause;
-
-
-
     // Start is called before the first frame update
     void Start()
     {
@@ -61,7 +56,7 @@ public class MainMenu : MonoBehaviour
         SceneManager.LoadScene("Traumatisme");
     }
 
-    public void NewQuiteButton()
+    public void QuiteButton()
     {
         Application.Quit();
     }
@@ -86,11 +81,6 @@ public class MainMenu : MonoBehaviour
     {
         optionsPanel.SetActive(false);
         mainMenuPanel.SetActive(true);
-    }
-
-    public void BackToMenuButton()
-    {
-        SceneManager.LoadScene("MainMenu");
     }
 
     public void setQualityGraphics(int qualityIndex)
