@@ -7,6 +7,12 @@ public class PickUpItem : MonoBehaviour
     [SerializeField]
     private float pickupRange = 2.6f;
 
+    [SerializeField]
+    private LayerMask layerMask;
+
+    [SerializeField]
+    private GameObject pickupText;
+
     public PickUpBehaviour playerPickUpBehaviour;
 
     // Update is called once per frame
@@ -14,12 +20,12 @@ public class PickUpItem : MonoBehaviour
     {
         RaycastHit hit;
 
-        if (Physics.Raycast(transform.position, transform.forward, out hit, pickupRange))
+        if (Physics.Raycast(transform.position, transform.forward, out hit, pickupRange, layerMask))
         {
             if (hit.transform.CompareTag("Item"))
             {
-                Debug.Log("Item in front");
-
+                
+                pickupText.SetActive(true);
 
                 if(Input.GetKeyDown(KeyCode.E))
                 {
@@ -27,5 +33,7 @@ public class PickUpItem : MonoBehaviour
                 }
             }
         }
+        else
+            pickupText.SetActive(false);
     }
 }
