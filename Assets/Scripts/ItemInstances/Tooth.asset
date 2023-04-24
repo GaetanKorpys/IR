@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: Tooth
   m_EditorClassIdentifier: 
   name: Dent
-  visual: {fileID: 21300000, guid: f7111abcf951a1f4398426869d06640b, type: 3}
+  visual: {fileID: 21300000, guid: b1467a403987cc34bb484643c6040bbd, type: 3}
   prefab: {fileID: 2675048927862504181, guid: 51495d7e370a41c49953072022975e1f, type: 3}
   description: La dent que tu as perdu
