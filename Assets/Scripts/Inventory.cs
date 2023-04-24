@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -23,9 +24,10 @@ public class Inventory : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyUp(KeyCode.I))
+        if (Input.GetKeyDown(KeyCode.I))
         {
             inventoryPanel.SetActive(!inventoryPanel.activeSelf);
+            Debug.Log("OKKK");
         }
     }
 
