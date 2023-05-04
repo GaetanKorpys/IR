@@ -20,8 +20,8 @@ public class CheckIncisor : MonoBehaviour
 
     void Update()
     {    
-        GameObject generatedObject = GameObject.Find("UpperJaw.001 (2)(Clone)");
-        if (generatedObject != null)
+        GameObject[] gameObjects = GameObject.FindGameObjectsWithTag("Incisor");
+        if (gameObjects.Length != 0)
         {
             lightComponent.color = Color.green;
             audioSource.clip = soundClipGoodAnswer;
@@ -37,8 +37,9 @@ public class CheckIncisor : MonoBehaviour
     {
         audioSource.Play();
 
-        if(testGoodAnswer){
+        if(testGoodAnswer && GetComponent<Renderer>().enabled == false){
             gameObject.GetComponent<RandomGeneration>().test = true;
+            GetComponent<Renderer>().enabled = true;
         }
     }
 }
