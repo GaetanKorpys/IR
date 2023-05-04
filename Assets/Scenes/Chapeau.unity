@@ -386,7 +386,7 @@ MonoBehaviour:
   lightComponent: {fileID: 681344472}
   soundClipGoodAnswer: {fileID: 8300000, guid: fce79f3b84b01b54da6fc458c1fcccf6, type: 3}
   soundClipBadAnwser: {fileID: 8300000, guid: aaa3fe5f4fc62104eba8e936187b3be0, type: 3}
-  gameObject: {fileID: 0}
+  gameObject: {fileID: 1943721957}
 --- !u!82 &285266495
 AudioSource:
   m_ObjectHideFlags: 0
@@ -836,7 +836,7 @@ MonoBehaviour:
   lightComponent: {fileID: 1125469763}
   soundClipGoodAnswer: {fileID: 8300000, guid: fce79f3b84b01b54da6fc458c1fcccf6, type: 3}
   soundClipBadAnwser: {fileID: 8300000, guid: aaa3fe5f4fc62104eba8e936187b3be0, type: 3}
-  gameObject: {fileID: 0}
+  gameObject: {fileID: 1943721957}
 --- !u!82 &435211607
 AudioSource:
   m_ObjectHideFlags: 0
@@ -1047,7 +1047,7 @@ MonoBehaviour:
   lightComponent: {fileID: 222570463}
   soundClipGoodAnswer: {fileID: 8300000, guid: fce79f3b84b01b54da6fc458c1fcccf6, type: 3}
   soundClipBadAnwser: {fileID: 8300000, guid: aaa3fe5f4fc62104eba8e936187b3be0, type: 3}
-  gameObject: {fileID: 0}
+  gameObject: {fileID: 1943721957}
 --- !u!114 &586197613
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1841,7 +1841,7 @@ MonoBehaviour:
   lightComponent: {fileID: 822794065}
   soundClipGoodAnswer: {fileID: 8300000, guid: fce79f3b84b01b54da6fc458c1fcccf6, type: 3}
   soundClipBadAnwser: {fileID: 8300000, guid: aaa3fe5f4fc62104eba8e936187b3be0, type: 3}
-  gameObject: {fileID: 0}
+  gameObject: {fileID: 1943721957}
 --- !u!82 &969117175
 AudioSource:
   m_ObjectHideFlags: 0
@@ -2050,7 +2050,7 @@ MonoBehaviour:
   lightComponent: {fileID: 1572340881}
   soundClipGoodAnswer: {fileID: 8300000, guid: fce79f3b84b01b54da6fc458c1fcccf6, type: 3}
   soundClipBadAnwser: {fileID: 8300000, guid: aaa3fe5f4fc62104eba8e936187b3be0, type: 3}
-  gameObject: {fileID: 0}
+  gameObject: {fileID: 1943721957}
 --- !u!82 &971881247
 AudioSource:
   m_ObjectHideFlags: 0
@@ -2259,7 +2259,7 @@ MonoBehaviour:
   lightComponent: {fileID: 1485468070}
   soundClipGoodAnswer: {fileID: 8300000, guid: fce79f3b84b01b54da6fc458c1fcccf6, type: 3}
   soundClipBadAnwser: {fileID: 8300000, guid: aaa3fe5f4fc62104eba8e936187b3be0, type: 3}
-  gameObject: {fileID: 0}
+  gameObject: {fileID: 1943721957}
 --- !u!82 &1007053740
 AudioSource:
   m_ObjectHideFlags: 0
@@ -2464,7 +2464,7 @@ MonoBehaviour:
   lightComponent: {fileID: 487455762}
   soundClipGoodAnswer: {fileID: 8300000, guid: fce79f3b84b01b54da6fc458c1fcccf6, type: 3}
   soundClipBadAnwser: {fileID: 8300000, guid: aaa3fe5f4fc62104eba8e936187b3be0, type: 3}
-  gameObject: {fileID: 0}
+  gameObject: {fileID: 1943721957}
 --- !u!82 &1075577907
 AudioSource:
   m_ObjectHideFlags: 0
@@ -2881,7 +2881,7 @@ MonoBehaviour:
   lightComponent: {fileID: 639831779}
   soundClipGoodAnswer: {fileID: 8300000, guid: fce79f3b84b01b54da6fc458c1fcccf6, type: 3}
   soundClipBadAnwser: {fileID: 8300000, guid: aaa3fe5f4fc62104eba8e936187b3be0, type: 3}
-  gameObject: {fileID: 0}
+  gameObject: {fileID: 1943721957}
 --- !u!82 &1224220963
 AudioSource:
   m_ObjectHideFlags: 0
@@ -3086,7 +3086,7 @@ MonoBehaviour:
   lightComponent: {fileID: 602385037}
   soundClipGoodAnswer: {fileID: 8300000, guid: fce79f3b84b01b54da6fc458c1fcccf6, type: 3}
   soundClipBadAnwser: {fileID: 8300000, guid: aaa3fe5f4fc62104eba8e936187b3be0, type: 3}
-  gameObject: {fileID: 0}
+  gameObject: {fileID: 1943721957}
 --- !u!82 &1231361279
 AudioSource:
   m_ObjectHideFlags: 0
@@ -3352,7 +3352,7 @@ MonoBehaviour:
   lightComponent: {fileID: 358863486}
   soundClipGoodAnswer: {fileID: 8300000, guid: fce79f3b84b01b54da6fc458c1fcccf6, type: 3}
   soundClipBadAnwser: {fileID: 8300000, guid: aaa3fe5f4fc62104eba8e936187b3be0, type: 3}
-  gameObject: {fileID: 0}
+  gameObject: {fileID: 1943721957}
 --- !u!82 &1370562963
 AudioSource:
   m_ObjectHideFlags: 0
@@ -3569,7 +3569,7 @@ MonoBehaviour:
   lightComponent: {fileID: 377600326}
   soundClipGoodAnswer: {fileID: 8300000, guid: fce79f3b84b01b54da6fc458c1fcccf6, type: 3}
   soundClipBadAnwser: {fileID: 8300000, guid: aaa3fe5f4fc62104eba8e936187b3be0, type: 3}
-  gameObject: {fileID: 0}
+  gameObject: {fileID: 1943721957}
 --- !u!82 &1481559647
 AudioSource:
   m_ObjectHideFlags: 0
@@ -3966,7 +3966,7 @@ MonoBehaviour:
   lightComponent: {fileID: 710546357}
   soundClipGoodAnswer: {fileID: 8300000, guid: fce79f3b84b01b54da6fc458c1fcccf6, type: 3}
   soundClipBadAnwser: {fileID: 8300000, guid: aaa3fe5f4fc62104eba8e936187b3be0, type: 3}
-  gameObject: {fileID: 0}
+  gameObject: {fileID: 1943721957}
 --- !u!82 &1839381725
 AudioSource:
   m_ObjectHideFlags: 0
@@ -4175,7 +4175,7 @@ MonoBehaviour:
   lightComponent: {fileID: 2074464171}
   soundClipGoodAnswer: {fileID: 8300000, guid: fce79f3b84b01b54da6fc458c1fcccf6, type: 3}
   soundClipBadAnwser: {fileID: 8300000, guid: aaa3fe5f4fc62104eba8e936187b3be0, type: 3}
-  gameObject: {fileID: 0}
+  gameObject: {fileID: 1943721957}
 --- !u!82 &1923587737
 AudioSource:
   m_ObjectHideFlags: 0
@@ -4363,6 +4363,7 @@ MonoBehaviour:
   - {fileID: 4703428247810156117, guid: 464c4a29598fbf7489cb208e1747d60d, type: 3}
   - {fileID: 2913360975675156325, guid: 122e8bca62b662d4da9d9a695b7d58c5, type: 3}
   generatedObject: {fileID: 0}
+  test: 0
 --- !u!1 &1992246588
 GameObject:
   m_ObjectHideFlags: 0
