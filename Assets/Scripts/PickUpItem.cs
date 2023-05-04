@@ -26,6 +26,7 @@ public class PickUpItem : MonoBehaviour
             {
                 
                 pickupText.SetActive(true);
+                Debug.Log("plll");
 
                 if(Input.GetKeyDown(KeyCode.E))
                 {

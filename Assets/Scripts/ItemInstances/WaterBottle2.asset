@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e5a06dc5bee5724d8fe0cd85cc1b5ad, type: 3}
+  m_Name: WaterBottle2
+  m_EditorClassIdentifier: 
+  name: Bouteille d'eau
+  visual: {fileID: 21300000, guid: f7111abcf951a1f4398426869d06640b, type: 3}
+  prefab: {fileID: 2072824351786908381, guid: 6b9250365539ee14aa9fa00183c9f5ee, type: 3}
+  description: Une bouteille remplie d'eau

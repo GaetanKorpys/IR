@@ -27,7 +27,6 @@ public class Inventory : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.I))
         {
             inventoryPanel.SetActive(!inventoryPanel.activeSelf);
-            Debug.Log("OKKK");
         }
     }
 
