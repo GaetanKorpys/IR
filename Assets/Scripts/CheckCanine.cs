@@ -5,13 +5,41 @@ using UnityEngine;
 public class CheckCanine : MonoBehaviour
 {
     public Light lightComponent;
+    public AudioClip soundClipGoodAnswer;
+    public AudioClip soundClipBadAnwser;
+    public GameObject gameObject;
+
+    private AudioSource audioSource;
+    private bool  testGoodAnswer = false;
+
+    void Start()
+    {
+        audioSource = GetComponent<AudioSource>();
+        audioSource.clip = soundClipBadAnwser;
+    }
+
 
     void Update()
     {
-        GameObject generatedObject = GameObject.Find("Canine_lower_left(Clone)");
+        GameObject generatedObject = GameObject.Find("UpperJaw.011 (1)(Clone)");
         if (generatedObject != null)
         {
             lightComponent.color = Color.green;
+            audioSource.clip = soundClipGoodAnswer;
+            testGoodAnswer = true;
+        } else {
+            lightComponent.color = Color.red;
+            audioSource.clip = soundClipBadAnwser;
+            testGoodAnswer = false;
+        }
+    }
+
+     void OnMouseDown()
+    {
+        audioSource.Play();
+
+        if(testGoodAnswer){
+            gameObject.GetComponent<RandomGeneration>().test = true;
         }
     }
 }
