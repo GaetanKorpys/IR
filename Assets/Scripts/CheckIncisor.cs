@@ -7,7 +7,7 @@ public class CheckIncisor : MonoBehaviour
     public Light lightComponent;
     public AudioClip soundClipGoodAnswer;
     public AudioClip soundClipBadAnwser;
-    public GameObject gameObject;
+    public GameObject randomTooth;
 
     private AudioSource audioSource;
     private bool  testGoodAnswer = false;
@@ -20,7 +20,9 @@ public class CheckIncisor : MonoBehaviour
 
     void Update()
     {    
+        //On récupère tous les objets qui sont tagués avec le tag "Incisor"
         GameObject[] gameObjects = GameObject.FindGameObjectsWithTag("Incisor");
+        //Si un objet incisor existe, c'est que la dent à gauche est une incisor
         if (gameObjects.Length != 0)
         {
             lightComponent.color = Color.green;
@@ -37,8 +39,9 @@ public class CheckIncisor : MonoBehaviour
     {
         audioSource.Play();
 
+        //On vérifie si la dent de gauche correspond. Si c'est le cas on modifie la variable "answer" de randomTooth 
         if(testGoodAnswer && GetComponent<Renderer>().enabled == false){
-            gameObject.GetComponent<RandomGeneration>().test = true;
+            randomTooth.GetComponent<RandomGeneration>().answer = true;
             GetComponent<Renderer>().enabled = true;
         }
     }

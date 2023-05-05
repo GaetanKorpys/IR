@@ -4,18 +4,18 @@ using UnityEngine;
 
 public class MouseRotation : MonoBehaviour
 {
-     private bool isDragging = false;
+    private bool isDragging = false;
     private Vector3 lastMousePosition;
     private Vector3 center;
 
-    public float rotationSpeed = 5.0f;
+    public float rotationSpeed = 0.5f;
 
     private bool isRotatingHorizontally = false;
     private bool isRotatingVertically = false;
 
     void Start()
     {
-        // Calculate center of the object
+        // Calcule le centre de l'objet
         center = GetComponent<Renderer>().bounds.center;
     }
 
@@ -29,7 +29,7 @@ public class MouseRotation : MonoBehaviour
             float rotationX = (currentMousePosition.y - lastMousePosition.y) * rotationSpeed;
             float rotationY = (currentMousePosition.x - lastMousePosition.x) * rotationSpeed;
 
-            // Check if we're rotating horizontally or vertically
+            // Vérifie si la souris se dirige vers la verticale ou l'horizontal
             if (!isRotatingHorizontally && Mathf.Abs(rotationY) > Mathf.Abs(rotationX))
             {
                 isRotatingVertically = true;
@@ -41,7 +41,7 @@ public class MouseRotation : MonoBehaviour
                 isRotatingVertically = false;
             }
 
-            // Rotate horizontally or vertically
+            // Fais pivoter l'objet à l'horizontal ou à la verticale
             if (isRotatingHorizontally)
             {
                 transform.RotateAround(center, Vector3.up, rotationY);
@@ -65,6 +65,7 @@ public class MouseRotation : MonoBehaviour
 
     void Update()
     {
+        //Rotation de l'objet via les flèches
         if (Input.GetKey(KeyCode.LeftArrow))
         {
             transform.RotateAround(center, Vector3.up, -rotationSpeed);
