@@ -33,6 +33,7 @@ public class RandomGeneration : MonoBehaviour
         if(answer){
             //Si le joueur a juste on supprime cette dent et on en génère une autre
             Destroy(generatedObject);
+            objectsToGenerate.Remove(objectsToGenerate[randomIndex]);
             generateTooth();
         }
     }
