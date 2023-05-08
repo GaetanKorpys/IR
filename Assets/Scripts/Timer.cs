@@ -6,7 +6,8 @@ using System;
 
 public class Timer : MonoBehaviour
 {
-    private float timeDuration = 3f;
+    [SerializeField]
+    private float timeDuration;
 
     private float timer;
 

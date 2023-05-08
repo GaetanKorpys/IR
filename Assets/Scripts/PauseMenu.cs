@@ -29,6 +29,12 @@ public class PauseMenu : MonoBehaviour
     [SerializeField]
     private Dropdown qualitiesDropdown;
 
+    [SerializeField]
+    private GameObject inventoryPanel;
+
+    [SerializeField]
+    private GameObject timerPanel;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -67,6 +73,9 @@ public class PauseMenu : MonoBehaviour
 
             pauseMenu.SetActive(isMenuOpened);
             pausePanel.SetActive(isMenuOpened);
+            inventoryPanel.SetActive(false);
+
+            timerPanel.SetActive(!isMenuOpened);
 
             pauseOptions.SetActive(false);
 
@@ -82,6 +91,7 @@ public class PauseMenu : MonoBehaviour
         pausePanel.SetActive(false);
         Time.timeScale = 1;
         cameraScript.enabled = true;
+        timerPanel.SetActive(true);
     }
 
     public void BackToMenuButton()
