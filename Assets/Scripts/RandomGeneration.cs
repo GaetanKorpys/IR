@@ -6,34 +6,36 @@ public class RandomGeneration : MonoBehaviour
 {
     public List<GameObject> objectsToGenerate;
     public GameObject generatedObject;
-    public bool test;
+    public bool answer;
+    private int randomIndex;
+
+    void generateTooth(){
+        Bounds bounds = GetComponent<Renderer>().bounds;
+        Vector3 objectPosition = bounds.center;
+        //Séléction et génération d'unde dent au hasard
+        randomIndex = Random.Range(0, objectsToGenerate.Count);
+        generatedObject = Instantiate(objectsToGenerate[randomIndex], objectPosition, transform.rotation);
+        generatedObject.transform.Rotate(-88, 59, -93);
+        
+        //On centre la dent à gauche
+        Vector3 offset = generatedObject.transform.position - generatedObject.GetComponent<Renderer>().bounds.center;
+        generatedObject.transform.position = objectPosition + offset;
+        //La variable "answer" sert à verifier si le joueur a cliqué sur la bonne dent
+        answer = false;
+    }
 
     void Start()
     {
-        Bounds bounds = GetComponent<Renderer>().bounds;
-        Vector3 objectPosition = bounds.center;
-        int randomIndex = Random.Range(0, objectsToGenerate.Count);
-        generatedObject = Instantiate(objectsToGenerate[randomIndex], objectPosition, transform.rotation);
-        generatedObject.transform.Rotate(-88, 59, -93);
-
-        Vector3 offset = generatedObject.transform.position - generatedObject.GetComponent<Renderer>().bounds.center;
-        generatedObject.transform.position = objectPosition + offset;
-        test = false;
+       generateTooth();
     }
 
     void Update(){
-        if(test){
+        if(answer){
+            //Si le joueur a juste on supprime cette dent et on en génère une autre
             Destroy(generatedObject);
-            Bounds bounds = GetComponent<Renderer>().bounds;
-            Vector3 objectPosition = bounds.center;
-            int randomIndex = Random.Range(0, objectsToGenerate.Count);
-            generatedObject = Instantiate(objectsToGenerate[randomIndex], objectPosition, transform.rotation);
-            generatedObject.transform.Rotate(-88, 59, -93);
-
-            Vector3 offset = generatedObject.transform.position - generatedObject.GetComponent<Renderer>().bounds.center;
-            generatedObject.transform.position = objectPosition + offset;
-            test = false;
-            }
+            objectsToGenerate.Remove(objectsToGenerate[randomIndex]);
+            generateTooth();
+        }
     }
 }
 

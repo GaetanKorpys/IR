@@ -7,23 +7,25 @@ public class CheckCanine : MonoBehaviour
     public Light lightComponent;
     public AudioClip soundClipGoodAnswer;
     public AudioClip soundClipBadAnwser;
-    public GameObject gameObject;
+    public GameObject randomTooth;
 
     private AudioSource audioSource;
-    private bool  testGoodAnswer = false;
+    private bool testGoodAnswer = false;
 
     void Start()
     {
         audioSource = GetComponent<AudioSource>();
-        audioSource.clip = soundClipBadAnwser;
     }
 
 
     void Update()
     {
-        GameObject generatedObject = GameObject.Find("UpperJaw.011 (1)(Clone)");
-        if (generatedObject != null)
+        //On récupère tous les objets qui sont tagués avec le tag "Canine"
+        GameObject[] gameObjects = GameObject.FindGameObjectsWithTag("Canine");
+        //Si un objet canine existe, c'est que la dent à gauche est une canine
+        if (gameObjects.Length != 0)
         {
+            //On change la couleur de la lumière de la dent, sa source audio et on indique que la dent à gauche lui correspond
             lightComponent.color = Color.green;
             audioSource.clip = soundClipGoodAnswer;
             testGoodAnswer = true;
@@ -38,8 +40,10 @@ public class CheckCanine : MonoBehaviour
     {
         audioSource.Play();
 
-        if(testGoodAnswer){
-            gameObject.GetComponent<RandomGeneration>().test = true;
+        //On vérifie si la dent de gauche correspond. Si c'est le cas on modifie la variable "answer" de randomTooth 
+        if(testGoodAnswer && GetComponent<Renderer>().enabled == false){
+            randomTooth.GetComponent<RandomGeneration>().answer = true;
+            GetComponent<Renderer>().enabled = true;
         }
     }
 }
