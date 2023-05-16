@@ -20,6 +20,9 @@ public class MainMenu : MonoBehaviour
     [SerializeField]
     private GameObject mainMenuPanel;
 
+    [SerializeField] 
+    private GameObject chaptersPanel;
+
     [SerializeField]
     private Dropdown qualitiesDropdown;
 
@@ -53,7 +56,7 @@ public class MainMenu : MonoBehaviour
 
     public void NewGameButton()
     {
-        SceneManager.LoadScene("Traumatisme");
+        SceneManager.LoadScene("DecouverteDesDents");
     }
 
     public void QuiteButton()
@@ -80,7 +83,24 @@ public class MainMenu : MonoBehaviour
     public void BackButton()
     {
         optionsPanel.SetActive(false);
+        chaptersPanel.SetActive(false);
         mainMenuPanel.SetActive(true);
+    }
+
+    public void ChaptersButton()
+    {
+        mainMenuPanel.SetActive(false);
+        chaptersPanel.SetActive(true);
+    }
+
+    public void GameButton()
+    {
+        SceneManager.LoadScene("DecouverteDesDents");
+    }
+
+    public void Game2Button()
+    {
+        SceneManager.LoadScene("TraumatismeDentaire");
     }
 
     public void setQualityGraphics(int qualityIndex)
