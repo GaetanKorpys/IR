@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: WaterBottle2
   m_EditorClassIdentifier: 
   name: Bouteille d'eau
-  visual: {fileID: 21300000, guid: f7111abcf951a1f4398426869d06640b, type: 3}
-  prefab: {fileID: 2072824351786908381, guid: 6b9250365539ee14aa9fa00183c9f5ee, type: 3}
-  description: Une bouteille remplie d'eau
+  visual: {fileID: 21300000, guid: ce993df7077ae834bbc0412b48d00cb2, type: 3}
+  prefab: {fileID: 1507586099340362254, guid: 41183929a8bbebb43b5e570cf27469ab, type: 3}
+  description: Utilise cette bouteille pour conserver ta dent.

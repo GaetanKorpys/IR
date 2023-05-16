@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7e5a06dc5bee5724d8fe0cd85cc1b5ad, type: 3}
-  m_Name: Tooth
+  m_Name: Milk 1
   m_EditorClassIdentifier: 
-  name: Dent
-  visual: {fileID: 21300000, guid: b1467a403987cc34bb484643c6040bbd, type: 3}
-  prefab: {fileID: 2675048927862504181, guid: 51495d7e370a41c49953072022975e1f, type: 3}
-  description: La dent que tu as perdue
+  name: Bouteille de lait en verre
+  visual: {fileID: 21300000, guid: 8d20d3a041c614244be80aa1eb7b236a, type: 3}
+  prefab: {fileID: 1721308392990588217, guid: 27b9fb4fea1fcf248ac3af9b10fe69c9, type: 3}
+  description: Utilises le lait pour mettre ta dent dedans.

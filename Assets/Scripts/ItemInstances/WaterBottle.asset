@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7e5a06dc5bee5724d8fe0cd85cc1b5ad, type: 3}
-  m_Name: Tooth
+  m_Name: WaterBottle
   m_EditorClassIdentifier: 
-  name: Dent
-  visual: {fileID: 21300000, guid: b1467a403987cc34bb484643c6040bbd, type: 3}
-  prefab: {fileID: 2675048927862504181, guid: 51495d7e370a41c49953072022975e1f, type: 3}
-  description: La dent que tu as perdue
+  name: Bouteille d'eau
+  visual: {fileID: 21300000, guid: 71b040b1ef6495641ad19f6a33182123, type: 3}
+  prefab: {fileID: 2072824351786908381, guid: 6b9250365539ee14aa9fa00183c9f5ee, type: 3}
+  description: Parfait pour conserver ta dent. Tu peux la mettre dans cette bouteille.

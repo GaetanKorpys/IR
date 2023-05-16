@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7e5a06dc5bee5724d8fe0cd85cc1b5ad, type: 3}
-  m_Name: Tooth
+  m_Name: Milk 3
   m_EditorClassIdentifier: 
-  name: Dent
-  visual: {fileID: 21300000, guid: b1467a403987cc34bb484643c6040bbd, type: 3}
-  prefab: {fileID: 2675048927862504181, guid: 51495d7e370a41c49953072022975e1f, type: 3}
-  description: La dent que tu as perdue
+  name: Brique de lait
+  visual: {fileID: 21300000, guid: ce2bfc941cc25db4bbdf0eb80e2a731b, type: 3}
+  prefab: {fileID: 6265355717494198018, guid: f5f8f0ac186390243a0aeeeaafd181b0, type: 3}
+  description: "Le lait permet \xE0 ta dent de ne pas s\xE9cher."
