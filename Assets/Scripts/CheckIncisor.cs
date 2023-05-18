@@ -18,8 +18,8 @@ public class CheckIncisor : MonoBehaviour
         audioSource.clip = soundClipBadAnwser;
     }
 
-    void Update()
-    {    
+    void OnMouseDown()
+    {
         //On récupère tous les objets qui sont tagués avec le tag "Incisor"
         GameObject[] gameObjects = GameObject.FindGameObjectsWithTag("Incisor");
         //Si un objet incisor existe, c'est que la dent à gauche est une incisor
@@ -33,10 +33,7 @@ public class CheckIncisor : MonoBehaviour
             audioSource.clip = soundClipBadAnwser;
             testGoodAnswer = false;
         }
-    }
 
-     void OnMouseDown()
-    {
         audioSource.Play();
 
         //On vérifie si la dent de gauche correspond. Si c'est le cas on modifie la variable "answer" de randomTooth 

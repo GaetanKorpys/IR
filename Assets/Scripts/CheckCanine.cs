@@ -20,7 +20,13 @@ public class CheckCanine : MonoBehaviour
 
     void Update()
     {
-        //On récupère tous les objets qui sont tagués avec le tag "Canine"
+       
+    }
+
+     void OnMouseDown()
+    {
+
+         //On récupère tous les objets qui sont tagués avec le tag "Canine"
         GameObject[] gameObjects = GameObject.FindGameObjectsWithTag("Canine");
         //Si un objet canine existe, c'est que la dent à gauche est une canine
         if (gameObjects.Length != 0)
@@ -34,10 +40,7 @@ public class CheckCanine : MonoBehaviour
             audioSource.clip = soundClipBadAnwser;
             testGoodAnswer = false;
         }
-    }
-
-     void OnMouseDown()
-    {
+        
         audioSource.Play();
 
         //On vérifie si la dent de gauche correspond. Si c'est le cas on modifie la variable "answer" de randomTooth 
