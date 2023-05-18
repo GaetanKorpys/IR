@@ -18,6 +18,9 @@ public class PauseMenu : MonoBehaviour
     private GameObject regleMenu;
 
     [SerializeField]
+    private GameObject explicationMenu;
+
+    [SerializeField]
     private GameObject pausePanel;
 
     [SerializeField]
@@ -39,7 +42,13 @@ public class PauseMenu : MonoBehaviour
     private GameObject timerPanel;
 
     [SerializeField]
-    private GameObject Inventory;
+    private GameObject inventory;
+
+    [SerializeField]
+    private GameObject victoryPanel;
+
+    [SerializeField]
+    private GameObject gameOverPanel;
 
     // Start is called before the first frame update
     void Start()
@@ -76,7 +85,19 @@ public class PauseMenu : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.Escape))
+
+        if(Timer.instance != null && Timer.instance.end)
+        {
+            if (Inventory.instance.isGameVictory())
+                victoryPanel.SetActive(true);
+            else
+                gameOverPanel.SetActive(true);
+
+            Time.timeScale=0;
+            cameraScript.enabled = false;
+        }
+
+        else if(Input.GetKeyDown(KeyCode.Escape))
         {
             isPause = !isPause;
 
@@ -103,6 +124,12 @@ public class PauseMenu : MonoBehaviour
         timerPanel.SetActive(true);
     }
 
+    public void GoToExplication()
+    {
+        regleMenu.SetActive(false);
+        explicationMenu.SetActive(true);
+    }
+
     public void BackToMenuButton()
     {
         pausePanel.SetActive(false);
@@ -121,12 +148,12 @@ public class PauseMenu : MonoBehaviour
     public void ContinueButton()
     {
         pausePanel.SetActive(false);
-        regleMenu.SetActive(false);
+        explicationMenu.SetActive(false);
         Time.timeScale = 1;
         cameraScript.enabled = true;
         timerPanel.SetActive(true);
 
-        Inventory.SetActive(true);
+        inventory.SetActive(true);
 
     }
 

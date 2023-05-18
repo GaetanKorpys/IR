@@ -17,11 +17,6 @@ public class Timer : MonoBehaviour
     [SerializeField]
     private bool countdown = true;
 
-    [SerializeField]
-    private GameObject victoryPanel;
-
-    [SerializeField]
-    private GameObject gameOverPanel;
 
 
     [SerializeField]
@@ -34,6 +29,16 @@ public class Timer : MonoBehaviour
     private TextMeshProUGUI firstSecond;
     [SerializeField]
     private TextMeshProUGUI secondSecond;
+
+    public static Timer instance;
+
+    public bool end = false;
+
+    private void Awake()
+    {
+        instance = this;
+    }
+
 
     // Start is called before the first frame update
     void Start()
@@ -63,11 +68,8 @@ public class Timer : MonoBehaviour
             separator.text = "";
             firstSecond.text = "";
             secondSecond.text = "";
-
-            if (Inventory.instance.isGameVictory())
-                victoryPanel.SetActive(true);
-            else
-                gameOverPanel.SetActive(true);
+            
+            end = true;
             
         }
     }
