@@ -6,13 +6,16 @@ using UnityEngine.UI;
 
 public class PauseMenu : MonoBehaviour
 {
-    private bool isMenuOpened = false;
+    private bool isPause = true;
 
     [SerializeField]
     private GameObject pauseMenu;
 
     [SerializeField]
     private GameObject pauseOptions;
+
+    [SerializeField]
+    private GameObject regleMenu;
 
     [SerializeField]
     private GameObject pausePanel;
@@ -34,6 +37,9 @@ public class PauseMenu : MonoBehaviour
 
     [SerializeField]
     private GameObject timerPanel;
+
+    [SerializeField]
+    private GameObject Inventory;
 
     // Start is called before the first frame update
     void Start()
@@ -61,6 +67,9 @@ public class PauseMenu : MonoBehaviour
         qualitiesDropdown.value = currentQualityIndex;
         qualitiesDropdown.RefreshShownValue();
 
+        Time.timeScale = isPause ? 0 : 1;
+        cameraScript.enabled = !isPause;
+
     }
 
 
@@ -69,18 +78,18 @@ public class PauseMenu : MonoBehaviour
     {
         if(Input.GetKeyDown(KeyCode.Escape))
         {
-            isMenuOpened = !isMenuOpened;
+            isPause = !isPause;
 
-            pauseMenu.SetActive(isMenuOpened);
-            pausePanel.SetActive(isMenuOpened);
+            pauseMenu.SetActive(isPause);
+            pausePanel.SetActive(isPause);
             inventoryPanel.SetActive(false);
 
-            timerPanel.SetActive(!isMenuOpened);
+            timerPanel.SetActive(!isPause);
 
             pauseOptions.SetActive(false);
 
-            Time.timeScale = isMenuOpened ? 0 : 1;
-            cameraScript.enabled = !isMenuOpened;
+            Time.timeScale = isPause ? 0 : 1;
+            cameraScript.enabled = !isPause;
         }
     }
 
@@ -98,11 +107,22 @@ public class PauseMenu : MonoBehaviour
     {
         pausePanel.SetActive(false);
         pauseMenu.SetActive(false);
-        pausePanel.SetActive(false);
         Time.timeScale = 1;
         cameraScript.enabled = true;
 
         SceneManager.LoadScene("MainMenu");
+    }
+
+    public void ContinueButton()
+    {
+        pausePanel.SetActive(false);
+        regleMenu.SetActive(false);
+        Time.timeScale = 1;
+        cameraScript.enabled = true;
+        timerPanel.SetActive(true);
+
+        Inventory.SetActive(true);
+
     }
 
     public void BackButton()

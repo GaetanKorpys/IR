@@ -15,7 +15,9 @@ public class Inventory : MonoBehaviour
     [SerializeField]
     private Transform inventorySlotParent;
 
-    const int InventorySize = 6;
+    const int InventorySize = 12;
+
+    private bool isOpen = false;
 
     private void Start()
     {
@@ -26,8 +28,11 @@ public class Inventory : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.I))
         {
-            inventoryPanel.SetActive(!inventoryPanel.activeSelf);
-        }
+            if (isOpen)
+                CloseInventory();
+            else
+                OpenInventory();
+        }   
     }
 
     public void AddItem(ItemData item)
@@ -36,9 +41,17 @@ public class Inventory : MonoBehaviour
         RefreshContent();
     }
 
+    private void OpenInventory()
+    {
+        inventoryPanel.SetActive(true);
+        isOpen = true;
+    }
+
     public void CloseInventory()
     { 
-        inventoryPanel.SetActive(false); 
+        inventoryPanel.SetActive(false);
+        ToolTipSystem.instance.Hide();
+        isOpen = false;
     }
 
     private void RefreshContent()
