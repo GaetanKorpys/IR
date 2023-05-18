@@ -19,6 +19,14 @@ public class Inventory : MonoBehaviour
 
     private bool isOpen = false;
 
+    public static Inventory instance;
+
+    private void Awake()
+    {
+        instance = this;
+    }
+
+
     private void Start()
     {
         RefreshContent();
@@ -67,6 +75,28 @@ public class Inventory : MonoBehaviour
     public bool IsFull()
     {
         return InventorySize == content.Count;
+    }
+
+    public bool isGameVictory()
+    {
+        bool dent = false;
+        bool liquide = false;
+
+        foreach(ItemData item in content)
+            if(item.name == "Dent")
+                dent = true;
+            else if(item.name == "Bouteille d'eau")
+                liquide = true;
+            else if(item.name == "Brique de lait")
+                liquide = true;
+            else if (item.name == "Tetrapack de lait")
+                liquide = true;
+            else if (item.name == "Bouteille de lait en verre")
+                liquide = true;
+
+        if(dent && liquide)
+            return true;
+        return false;
     }
     
 }

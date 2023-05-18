@@ -18,6 +18,13 @@ public class Timer : MonoBehaviour
     private bool countdown = true;
 
     [SerializeField]
+    private GameObject victoryPanel;
+
+    [SerializeField]
+    private GameObject gameOverPanel;
+
+
+    [SerializeField]
     private TextMeshProUGUI firstMinute;
     [SerializeField]
     private TextMeshProUGUI secondMinute;
@@ -39,16 +46,30 @@ public class Timer : MonoBehaviour
     {
         if (countdown && timer > 0)
         {
-            timer -= Time.deltaTime;
-            UpdateTimerDisplay(timer);
-        }
-        else if(!countdown && timer < timeDuration)
-        {
-            timer += Time.deltaTime;
-            UpdateTimerDisplay(timer);
+            if(timer < 30)  
+                Flash(); 
+            else
+            {
+                timer -= Time.deltaTime;
+                UpdateTimerDisplay(timer);
+            }
+
         }
         else
-            Flash();
+        {
+
+            firstMinute.text = "";
+            secondMinute.text = "";
+            separator.text = "";
+            firstSecond.text = "";
+            secondSecond.text = "";
+
+            if (Inventory.instance.isGameVictory())
+                victoryPanel.SetActive(true);
+            else
+                gameOverPanel.SetActive(true);
+            
+        }
     }
 
     private void UpdateTimerDisplay(float time)
@@ -67,18 +88,20 @@ public class Timer : MonoBehaviour
     {
         if (countdown && timer != 0)
         {
-            timer = 0;
+            //timer = 0;
+            timer -= Time.deltaTime;
             UpdateTimerDisplay(timer);
         }
 
         if (!countdown && timer != timeDuration)
         {
-            timer = 0;
+            //timer = 0;
             UpdateTimerDisplay(timer);
         }
 
         if (flashTimer <= 0)
             flashTimer = flashDuration;
+
         else if (flashTimer >= flashDuration / 2)
         {
             flashTimer -= Time.deltaTime;
