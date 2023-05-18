@@ -20414,7 +20414,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f44009c3b9b883f47864a408fe14858e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeDuration: 20
+  timeDuration: 390
   countdown: 1
   firstMinute: {fileID: 998633634}
   secondMinute: {fileID: 498767532}
