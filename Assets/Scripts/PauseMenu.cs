@@ -97,7 +97,7 @@ public class PauseMenu : MonoBehaviour
             cameraScript.enabled = false;
         }
 
-        else if(Input.GetKeyDown(KeyCode.Escape))
+        else if(Input.GetKeyDown(KeyCode.P))
         {
             isPause = !isPause;
 
