@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 2452630115825049377}
   - component: {fileID: 4024856512946819377}
   - component: {fileID: 7751592717701186297}
+  - component: {fileID: 8696351684123924463}
   m_Layer: 0
   m_Name: canine4
   m_TagString: Canine
@@ -97,3 +98,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rotationSpeed: 0.5
+--- !u!65 &8696351684123924463
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6361490076476076104}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.016373964, y: 0.018094901, z: 0.038386002}
+  m_Center: {x: -0.037196532, y: -0.07119951, z: 0.021234175}

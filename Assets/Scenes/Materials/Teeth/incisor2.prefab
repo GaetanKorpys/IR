@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 8606671716615136043}
   - component: {fileID: 2294469926648022418}
   - component: {fileID: 8207027536229591438}
+  - component: {fileID: 3190068907945107236}
   m_Layer: 0
   m_Name: incisor2
   m_TagString: Incisor
@@ -97,3 +98,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rotationSpeed: 0.5
+--- !u!65 &3190068907945107236
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1600709388707420663}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.018692013, y: 0.01168416, z: 0.034223076}
+  m_Center: {x: -0.008961725, y: -0.08926018, z: 0.021257892}
