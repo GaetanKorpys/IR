@@ -30,6 +30,9 @@ public class PauseMenu2 : MonoBehaviour
     [SerializeField]
     private GameObject denture;
 
+    [SerializeField]
+    private GameObject explicationMenu;
+
 
     // Start is called before the first frame update
     void Start()
@@ -131,6 +134,13 @@ public class PauseMenu2 : MonoBehaviour
         pauseOptions.SetActive(true);
     }
 
+    public void ContinueButton()
+    {
+        pausePanel.SetActive(false);
+        explicationMenu.SetActive(false);
+        Time.timeScale = 1;
+
+    }
 
     public void setQualityGraphics(int qualityIndex)
     {

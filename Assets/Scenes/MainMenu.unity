@@ -3795,7 +3795,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 853633900}
   m_HandleRect: {fileID: 853633899}
   m_Direction: 2
-  m_Value: 1
+  m_Value: 0
   m_Size: 1
   m_NumberOfSteps: 0
   m_OnValueChanged:
@@ -4375,7 +4375,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  m_IsOn: 1
+  m_IsOn: 0
 --- !u!1 &1617338516
 GameObject:
   m_ObjectHideFlags: 0

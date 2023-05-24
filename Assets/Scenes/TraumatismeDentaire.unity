@@ -204,7 +204,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3927306}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3b86dbbaaa422b64d8a77740b0e66a5a, type: 3}
   m_Name: 
@@ -1338,7 +1338,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &56365842
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1367,8 +1367,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.010475, y: 0.00061417}
-  m_SizeDelta: {x: 2050.5, y: 1011.3}
+  m_AnchoredPosition: {x: 1.0525, y: -0.69285}
+  m_SizeDelta: {x: 2224.4, y: 969.39}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1001 &58148145
 PrefabInstance:
@@ -9466,7 +9466,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 2.0286255, y: 3.1622}
+  m_AnchoredPosition: {x: 2.0285645, y: 3.162201}
   m_SizeDelta: {x: 61.6448, y: 90.7557}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &483802387
@@ -10960,7 +10960,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  m_IsOn: 1
+  m_IsOn: 0
 --- !u!1001 &553097654
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -23903,8 +23903,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.010475, y: 0.00061417}
-  m_SizeDelta: {x: 2050.5, y: 1011.3}
+  m_AnchoredPosition: {x: 1.0511, y: -0.69339}
+  m_SizeDelta: {x: 2224.4, y: 969.39}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1001 &1326039009
 PrefabInstance:
@@ -24067,7 +24067,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -252, y: 102}
+  m_AnchoredPosition: {x: -450, y: 102}
   m_SizeDelta: {x: 293.9946, y: 66.1314}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1329854316
@@ -28235,7 +28235,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1513521580
 RectTransform:
   m_ObjectHideFlags: 0
@@ -28266,8 +28266,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.010475, y: 0.00061417}
-  m_SizeDelta: {x: 2050.5, y: 1011.3}
+  m_AnchoredPosition: {x: 1.0497, y: -0.69234}
+  m_SizeDelta: {x: 2224.4, y: 969.39}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1001 &1516188474
 PrefabInstance:
@@ -31455,7 +31455,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: -48, y: -904}
+  m_AnchoredPosition: {x: -50, y: -883.7}
   m_SizeDelta: {x: 509.4043, y: 128.8567}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1653382309
@@ -39121,7 +39121,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -412.67566, y: -19.00003}
+  m_AnchoredPosition: {x: -412.67566, y: -19.000061}
   m_SizeDelta: {x: -1074.9019, y: -949.6776}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2038507317
@@ -39265,8 +39265,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.010475, y: 0.00061417}
-  m_SizeDelta: {x: 2050.5, y: 1011.3}
+  m_AnchoredPosition: {x: 1.0497, y: -0.69285}
+  m_SizeDelta: {x: 2224.4, y: 969.39}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1001 &2044567140
 PrefabInstance:
@@ -40253,7 +40253,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -252, y: 102}
+  m_AnchoredPosition: {x: -450, y: 102}
   m_SizeDelta: {x: 293.9946, y: 66.1314}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2091226583
